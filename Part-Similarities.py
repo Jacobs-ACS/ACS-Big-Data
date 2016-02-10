@@ -36,7 +36,7 @@ sc = SparkContext(conf = conf)
 
 print "\nLoading vehicle parts..."
 
-data = sc.textFile("file:///SparkCourse/vehicle2parts.csv")
+data = sc.textFile("file:///users/kindrijd/documents/github/ACS-big-data/vehiclepartstest.csv")
 # test input data file format: vehicle ID, part ID, failureDate
 # Map vehicles and parts to key / value pairs: ((vehicle ID, part ID), 1)
 vp = data.map(lambda l: l.split(',')).map(lambda x: ((int(x[0]), int(x[1])), 1))
